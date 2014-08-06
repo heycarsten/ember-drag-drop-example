@@ -1,0 +1,13 @@
+<section class="tile-sort">
+  <header>
+    <h1>Time to <i>DISRUPT</i> some tiles in the Cloud</h1>
+  </header>
+
+  {{#ui-dragzone tagName="ol"}}
+    {{#each bebe in sortedBebes}}
+      {{#ui-draggable tagName="li"}}
+        <img {{bind-attr src=bebe.url}} width=200 height=200>
+      {{/ui-draggable}}
+    {{/each}}
+  {{/ui-dragzone}}
+</section>
