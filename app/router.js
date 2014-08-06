@@ -1,10 +1,13 @@
-import Ember from 'ember';
+import Em from 'ember';
 
-var Router = Ember.Router.extend({
+var Router = Em.Router.extend({
   location: DraglyIOENV.locationType
 });
 
 Router.map(function() {
+  this.route('tile-sort');
+  this.route('list-sort');
+  this.route('bucket-sort');
 });
 
 export default Router;

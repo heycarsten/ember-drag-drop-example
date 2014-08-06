@@ -1,10 +1,10 @@
-import Ember from 'ember';
+import Em from 'ember';
 import Resolver from 'ember/resolver';
 import loadInitializers from 'ember/load-initializers';
 
-Ember.MODEL_FACTORY_INJECTIONS = true;
+Em.MODEL_FACTORY_INJECTIONS = true;
 
-var App = Ember.Application.extend({
+var App = Em.Application.extend({
   modulePrefix: 'dragly-io', // TODO: loaded via config
   Resolver: Resolver
 });
