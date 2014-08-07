@@ -1,11 +1,13 @@
 <section class="sort-list">
   <header>
-    <h1>Sort a list, it's all the same.</h1>
+    <label>
+      {{input type="checkbox" checked=canMove}} Allow Paradigm Shifting
+    </label>
   </header>
 
   <main>
     {{#ui-dragzone swap="swapBebes"}}
-      {{#each bebe in this enabled=true}}
+      {{#each bebe in this enabled=canMove}}
         {{#ui-draggable model=bebe}}
           <img draggable="false" {{bind-attr src=bebe.url}}>
           <span>{{bebe.name}}</span>
