@@ -1,13 +1,13 @@
 // Yoinked from https://github.com/daneden/animate.css
-@mixin animated {
+@mixin animate {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-@mixin animiated-forever {
-  @include animated;
+@mixin animate-forever {
+  @include animate;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
@@ -45,6 +45,8 @@
 }
 
 @mixin animation-swing {
-  @include transform-origin(top center);
-  @include animation-name(swing);
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
 }

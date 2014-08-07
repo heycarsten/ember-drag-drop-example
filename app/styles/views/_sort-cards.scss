@@ -31,5 +31,10 @@ section.sort-cards {
     img {
       font-size: 0;
     }
+
+    &[draggable=true] {
+      @include animate-forever;
+      @include animation-swing;
+    }
   }
 }
