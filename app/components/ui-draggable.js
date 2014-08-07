@@ -21,6 +21,12 @@ export default Em.Component.extend({
   isDraggable:       Em.computed.alias('parentView.enabled'),
   lock:              null,
 
+  classNameBindings: [
+    'isDraggable:draggable',
+    'isHavingEncounter:having-encounter',
+    'isBeingDragged:being-dragged'
+  ],
+
   draggable: function() {
     return this.get('isDraggable') ? 'true' : null;
   }.property('isDraggable'),
@@ -44,7 +50,13 @@ export default Em.Component.extend({
     // once we can look it up we can get everything else that we need. So let's
     // just store the DOM ID as plain text.
     event.dataTransfer.setData('text', elementId);
+
+    this.set('isBeingDragged', true);
   }.on('dragStart'),
+
+  didStopDragging: function() {
+    //this.set('isBeingDragged', false);
+  }.on('dragEnd'),
 
   didStartDraggableEncounter: function(event) {
     // Hilariously there is a default dragover event and if we don't cancel it,

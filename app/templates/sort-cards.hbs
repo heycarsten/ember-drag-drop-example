@@ -1,15 +1,14 @@
 <section class="sort-cards">
   <header>
-    <h1>Time to <i>DISRUPT</i> some cards</h1>
-    <p>
+    <label>
       {{input type="checkbox" checked=canMove}} Enable Disruption
-    </p>
+    </label>
   </header>
 
   <main>
     {{#ui-dragzone swap="swapBebes" enabled=canMove class="cards-list"}}
       {{#each bebe in this}}
-        {{#ui-draggable model=bebe}}<img draggable="false" {{bind-attr src=bebe.url}} width="175" height="175">{{/ui-draggable}}
+        {{#ui-draggable model=bebe}}<img draggable="false" {{bind-attr src=bebe.url}} width="175" height="175"><span>{{bebe.name}}</span>{{/ui-draggable}}
       {{/each}}
     {{/ui-dragzone}}
   </main>

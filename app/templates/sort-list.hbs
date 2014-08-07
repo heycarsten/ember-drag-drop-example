@@ -6,9 +6,9 @@
   <main>
     {{#ui-dragzone swap="swapBebes"}}
       {{#each bebe in this enabled=true}}
-        {{#ui-draggable model=bebe lock="vertical"}}
-          <img draggable="false" {{bind-attr src=bebe.url}} width="75">
-          {{bebe.name}}
+        {{#ui-draggable model=bebe}}
+          <img draggable="false" {{bind-attr src=bebe.url}}>
+          <span>{{bebe.name}}</span>
         {{/ui-draggable}}
       {{/each}}
     {{/ui-dragzone}}
