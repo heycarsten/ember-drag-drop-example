@@ -2,16 +2,15 @@
   <header>
     <h1>Time to <i>DISRUPT</i> some cards</h1>
     <p>
-      {{input type="checkbox" checked=canMove}} Enable reordering
+      {{input type="checkbox" checked=canMove}} Enable Disruption
     </p>
   </header>
 
-
-  {{#ui-dragzone swap="swapBebes" enabled=canMove class="cards-list"}}
-    {{#each bebe in sortedBebes}}
-      {{#ui-draggable model=bebe}}
-        <img draggable="false" {{bind-attr src=bebe.url}} width="200" height="200">
-      {{/ui-draggable}}
-    {{/each}}
-  {{/ui-dragzone}}
+  <main>
+    {{#ui-dragzone swap="swapBebes" enabled=canMove class="cards-list"}}
+      {{#each bebe in sortedBebes}}
+        {{#ui-draggable model=bebe}}<img draggable="false" {{bind-attr src=bebe.url}} width="175" height="175">{{/ui-draggable}}
+      {{/each}}
+    {{/ui-dragzone}}
+  </main>
 </section>

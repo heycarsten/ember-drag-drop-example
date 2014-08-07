@@ -6,8 +6,11 @@ export default Em.ArrayController.extend({
 
   actions: {
     swapBebes: function(srcBebe, destBebe) {
-      console.log('moving', srcBebe);
-      console.log('to', destBebe);
+      var srcSeq  = srcBebe.get('seq');
+      var destSeq = destBebe.get('seq');
+
+      destBebe.set('seq', srcSeq);
+      srcBebe.set('seq', destSeq);
     }
   }
 });
