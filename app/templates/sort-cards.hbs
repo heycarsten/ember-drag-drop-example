@@ -8,7 +8,7 @@
 
   <main>
     {{#ui-dragzone swap="swapBebes" enabled=canMove class="cards-list"}}
-      {{#each bebe in sortedBebes}}
+      {{#each bebe in this}}
         {{#ui-draggable model=bebe}}<img draggable="false" {{bind-attr src=bebe.url}} width="175" height="175">{{/ui-draggable}}
       {{/each}}
     {{/ui-dragzone}}

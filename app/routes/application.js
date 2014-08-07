@@ -19,7 +19,8 @@ var BEBES = [
 ];
 
 export default Em.Route.extend({
-  model: function() {
-    return BEBES;
+  setupController: function() {
+    var bebes = this.controllerFor('bebes');
+    bebes.set('content', BEBES);
   }
 });

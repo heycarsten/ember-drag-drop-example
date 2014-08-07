@@ -1,8 +1,8 @@
 import Em from 'ember';
 
 export default Em.ArrayController.extend({
-  bebesSorting: ['seq'],
-  sortedBebes: Em.computed.sort('@this', 'bebesSorting'),
+  needs: 'bebes',
+  content: Em.computed.alias('controllers.bebes.sortedBebes'),
 
   actions: {
     swapBebes: function(srcBebe, destBebe) {
