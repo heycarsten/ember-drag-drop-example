@@ -1,8 +1,8 @@
 import Em from 'ember';
 
 export default Em.Object.extend({
-  id:       null,
-  sequence: null,
+  id:  null,
+  seq: null,
 
   url: function() {
     return `/images/bebes/${this.get('id')}.jpg`;
