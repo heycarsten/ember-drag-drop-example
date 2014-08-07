@@ -1,5 +1,16 @@
 <section class="sort-list">
   <header>
-    <h1>You chose LIST SORT, sort this list in the cloud:</h1>
+    <h1>Sort a list, it's all the same.</h1>
   </header>
+
+  <main>
+    {{#ui-dragzone swap="swapBebes"}}
+      {{#each bebe in this enabled=true}}
+        {{#ui-draggable model=bebe lock="vertical"}}
+          <img draggable="false" {{bind-attr src=bebe.url}} width="75">
+          {{bebe.name}}
+        {{/ui-draggable}}
+      {{/each}}
+    {{/ui-dragzone}}
+  </main>
 </section>
