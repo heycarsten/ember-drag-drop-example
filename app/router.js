@@ -5,9 +5,8 @@ var Router = Em.Router.extend({
 });
 
 Router.map(function() {
-  this.route('tile-sort');
-  this.route('list-sort');
-  this.route('bucket-sort');
+  this.route('sort-cards', { path: '/sort/cards' });
+  this.route('sort-list', { path: '/sort/list' });
 });
 
 export default Router;

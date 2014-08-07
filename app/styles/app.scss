@@ -1,6 +1,122 @@
 @import "vendor/normalize";
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
-  font-family: Helvetica Neue;
+  font-family: "Helvetica Neue";
   font-size: 16px;
+}
+
+body > div > header {
+  margin-top: 138px;
+  height: 100px;
+  position: relative;
+
+  h1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    &:after {
+      color: rgba(white, 0.8);
+      position: relative;
+      top: -76px;
+      left: -16px;
+      content: "®";
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    svg {
+      display: inline-block;
+      width: 333px;
+
+      path {
+       fill: white;
+      }
+    }
+  }
+}
+
+body > div > main {
+  color: white;
+  width: 100%;
+}
+
+body > div > footer {
+  position: fixed;
+  bottom: 10px;
+  left: 150px;
+  right: 150px;
+  color: rgba(white, 0.5);
+  font-size: 13px;
+  text-align: right;
+}
+
+body {
+  background: url("/images/valley-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+section.index {
+  text-align: center;
+  margin-top: 140px;
+
+  h1 {
+    font-size: 26px;
+    font-weight: normal;
+    margin: 60px 0;
+
+    span {
+      position: relative;
+      top: -7px;
+      left: -2px;
+      font-size: 11px;
+      color: rgba(white, 0.8);
+    }
+  }
+
+  nav {
+    margin-top: 75px;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin: 32px;
+      display: inline-block;
+    }
+
+    a {
+      display: inline-block;
+      background: rgba(black, 0.3);
+      line-height: 74px;
+      margin: 0;
+      padding: 0;
+      height: 78px;
+      border: 2px solid white;
+      width: 248px;
+      text-align: center;
+      border-radius: 6px;
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      font-weight: 500;
+
+      &:active {
+        color: #ffedab;
+        border-color: #ffedab;
+      }
+    }
+  }
 }
