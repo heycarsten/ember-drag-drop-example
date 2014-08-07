@@ -1,6 +1,14 @@
-# Dragly-io
+# HTML5 Drag & Drop and Ember
 
-This README outlines the details of collaborating on this Ember application.
+## It's easy, but limited
+
+It sort of sucks for moving data outside of the browser because `setData` is
+brokenish and support is questionable in IE. More importantly it kind of sucks
+for moving stuff around on the page because you can't lock the axis of
+movement or constrain movement in any way.
+
+BUT, if those subtilities aren't a big deal to you, then it's a pretty quick
+way to integrate drag and drop without any external dependencies.
 
 ## Installation
 
@@ -11,15 +19,4 @@ This README outlines the details of collaborating on this Ember application.
 ## Running
 
 * `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://iamstef.net/ember-cli/](http://iamstef.net/ember-cli/).
+* Visit the app at: http://localhost:4200

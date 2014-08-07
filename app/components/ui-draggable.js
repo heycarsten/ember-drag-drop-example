@@ -6,7 +6,9 @@ import Em from 'ember';
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_and_drop
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_operations
 // http://msdn.microsoft.com/en-us/library/ie/hh673539(v=vs.85).aspx
+// http://www.w3.org/html/wg/drafts/html/master/editing.html
 // http://www.thecssninja.com/talks/dnd_and_friends/
+// http://drafts.htmlwg.org/html/CR/editing.html#dnd
 // http://caniuse.com/dragndrop
 //
 export default Em.Component.extend({
@@ -17,6 +19,7 @@ export default Em.Component.extend({
   effect:            'copy',
   dragzone:          Em.computed.alias('parentView'),
   isDraggable:       Em.computed.alias('parentView.enabled'),
+  lock:              null,
 
   draggable: function() {
     return this.get('isDraggable') ? 'true' : null;
@@ -36,6 +39,7 @@ export default Em.Component.extend({
     // fancier you get, the more likely your stuff won't work on every browser.
     // For example, IE only understands "Text" and "URL" at the time of this
     // writing.
+    //
     // All we really need is to store something to remember this draggable node,
     // once we can look it up we can get everything else that we need. So let's
     // just store the DOM ID as plain text.
@@ -43,11 +47,13 @@ export default Em.Component.extend({
   }.on('dragStart'),
 
   didStartDraggableEncounter: function(event) {
+    // Hilariously there is a default dragover event and if we don't cancel it,
+    // our stuff won't work.
     event.preventDefault();
     this.set('isHavingEncounter', true);
   }.on('dragOver'),
 
-  didFinishDraggableEncounter: function(event) {
+  didFinishDraggableEncounter: function() {
     this.set('isHavingEncounter', false);
   }.on('dragLeave'),
 
