@@ -1,0 +1,35 @@
+section.sort-cards {
+  position: relative;
+
+  header {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  main {
+    position: relative;
+    top: 100px;
+    text-align: center;
+  }
+
+  ol {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+  }
+
+  li {
+    text-align: left;
+    display: inline-block;
+    font-size: 0;
+    margin: 14px;
+    padding: 0;
+
+    img {
+      font-size: 0;
+    }
+  }
+}

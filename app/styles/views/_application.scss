@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+}
+
+body {
+  background-color: #ffbe61;
+}
+
+.dragly-logo {
+  display: inline-block;
+
+  svg path {
+    fill: white;
+  }
+}
+
+body > div {
+  > header {
+    height: 100px;
+    background: rgba(#201520, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    h1 a {
+      text-decoration: none;
+    }
+
+    h1 {
+      margin-left: 40px;
+    }
+  }
+
+  > main {
+    margin-top: 100px;
+  }
+
+  > footer {
+    position: fixed;
+    bottom: 10px;
+    left: 150px;
+    right: 150px;
+    color: rgba(white, 0.5);
+    font-size: 13px;
+    text-align: right;
+  }
+}

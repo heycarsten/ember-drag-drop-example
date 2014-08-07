@@ -1,0 +1,97 @@
+body.index {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("/images/valley-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  > div > header {
+    display: none;
+  }
+
+  > div > main {
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 660px;
+    height: 420px;
+    margin: auto;
+  }
+}
+
+section.index {
+  text-align: center;
+
+  header .dragly-logo:after {
+    color: rgba(white, 0.8);
+    position: relative;
+    top: -79px;
+    left: -13px;
+    content: "®";
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: normal;
+    margin-top: 26px;
+
+    span {
+      position: relative;
+      top: -7px;
+      left: -2px;
+      font-size: 11px;
+      color: rgba(white, 0.8);
+    }
+  }
+
+  nav {
+    margin-top: 56px;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin: 32px;
+      display: inline-block;
+    }
+
+    a {
+      display: inline-block;
+      background: rgba(black, 0.3);
+      line-height: 74px;
+      margin: 0;
+      padding: 0;
+      height: 78px;
+      border: 2px solid white;
+      width: 258px;
+      text-align: center;
+      border-radius: 6px;
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      font-weight: 500;
+
+      &:hover {
+        border-color: rgba(white, 0.9);
+        background-color: rgba(white, 0.9);
+        color: black;
+      }
+
+      &:active {
+        background: rgba(black, 0.8);
+        border-color: rgba(black, 0.8);
+        color: white;
+      }
+    }
+  }
+}
