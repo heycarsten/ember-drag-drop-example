@@ -10,13 +10,13 @@ import Em from 'ember';
 // http://www.thecssninja.com/talks/dnd_and_friends/
 // http://drafts.htmlwg.org/html/CR/editing.html#dnd
 // http://caniuse.com/dragndrop
-//
+
 export default Em.Component.extend({
   tagName:           'li',
   attributeBindings: 'draggable',
   model:             null,
   isHavingEncounter: false,
-  effect:            'copy',
+  effect:            'move',
   dragzone:          Em.computed.alias('parentView'),
   isDraggable:       Em.computed.alias('parentView.enabled'),
   lock:              null,
@@ -48,7 +48,8 @@ export default Em.Component.extend({
     //
     // All we really need is to store something to remember this draggable node,
     // once we can look it up we can get everything else that we need. So let's
-    // just store the DOM ID as plain text.
+    // just store the DOM ID as plain text. Ideally we would set this to a MIME
+    // type specific to our application, such as "text/x-dragly-item-id" but IE.
     event.dataTransfer.setData('text', elementId);
 
     this.set('isBeingDragged', true);
