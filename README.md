@@ -10,8 +10,8 @@ for your users.
 
 DnD accels at moving data in and out of the browser, with the ironic exception
 of IE (sadly, yes, even 11), Microsoft having designed the specification in the
-first place. I don't show you how to do move _data_ in and out of the browser
-here, that would be too useful. If you are interested in that, you'll want to
+first place. I don't show you how to move data in and out of the browser here,
+but all of events are the same. If you are interested in that, you'll want to
 look into the [`dataTransfer`](http://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#the-datatransfer-interface)
 property of the `dragstart` and `drop` events, it provides access to any files
 and content dropped onto an element you've deemed droppable.
