@@ -21,6 +21,8 @@ use them to implement swapping items through dragging.
 
 ## The Example
 
+[Check it out here](http://ember-drag-drop-example.s3-website-us-east-1.amazonaws.com/)
+
 On the homepage you'll see two buttons, Disrupt Order and
 Position Veritcals. If you click Disrupt Order you'll be taken to page of tiles,
 you can enable/disable sorting by checking the Enable Disruption check box. Drag
