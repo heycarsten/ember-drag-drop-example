@@ -55,7 +55,7 @@ export default Em.Component.extend({
   }.on('dragStart'),
 
   didStopDragging: function() {
-    //this.set('isBeingDragged', false);
+    this.set('isBeingDragged', false);
   }.on('dragEnd'),
 
   didStartDraggableEncounter: function(event) {
