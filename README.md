@@ -19,6 +19,16 @@ and content dropped onto an element you've deemed droppable.
 This example shows you how to capture the events in an Ember component, and then
 use them to implement swapping items through dragging.
 
+## The Example
+
+On the homepage you'll see two buttons, Disrupt Order and
+Position Veritcals. If you click Disrupt Order you'll be taken to page of tiles,
+you can enable/disable sorting by checking the Enable Disruption check box. Drag
+a tile over another one to swap them. The other section Position Veritcals, was
+going to demonstrate inserting an item above or below an existing one in a
+vertical list, I ran out of time so I never finished implementing it. See
+"Update" below for a library that provides that functionality:
+
 ## _Update_
 
 Ryan Florence is working on a series of Ember component mixins for drag and
