@@ -1,16 +1,5 @@
 import Em from 'ember';
 
-// Resources:
-//
-// https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Tasks/DragAndDrop.html#//apple_ref/doc/uid/30001233-BAJGJJAH
-// https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_and_drop
-// https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_operations
-// http://msdn.microsoft.com/en-us/library/ie/hh673539(v=vs.85).aspx
-// http://www.w3.org/html/wg/drafts/html/master/editing.html
-// http://www.thecssninja.com/talks/dnd_and_friends/
-// http://drafts.htmlwg.org/html/CR/editing.html#dnd
-// http://caniuse.com/dragndrop
-
 export default Em.Component.extend({
   tagName:           'li',
   attributeBindings: 'draggable',

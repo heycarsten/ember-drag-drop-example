@@ -39,3 +39,13 @@ that you can ensure your droppables only accept the correct draggables.
 
 * `ember server`
 * Visit the app at: http://localhost:4200
+
+## Resources
+
+* [Apple Developer](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/SafariJSProgTopics/Tasks/DragAndDrop.html#//apple_ref/doc/uid/30001233-BAJGJJAH) - Safari Developer reference for Drag and Drop API
+* [Drag and Drop](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_and_drop) - MDN article on Drag and Drop
+* [Drag Operations](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_operations) - MDN article about drag operations
+* [MSDN](http://msdn.microsoft.com/en-us/library/ie/hh673539.aspx) - Drag and Drop in Internet Explorer
+* [The CSS Ninja](http://www.thecssninja.com/talks/dnd_and_friends/) - Blog article
+* [W3C HTML5 Draft](http://drafts.htmlwg.org/html/CR/editing.html#dnd) - The actual working spec for HTML5 DND
+* [Can I Use?](http://caniuse.com/dragndrop) - Browser support
